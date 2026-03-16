@@ -1,0 +1,460 @@
+:root {
+  --primary-gold: #c5a059;
+  --primary-gold-hover: #d6b36d;
+  --dark-green: #1e392a;
+  --darker-green: #15291e;
+  --text-light: #f5f5f5;
+  --text-dark: #333333;
+  --glass-bg: rgba(30, 57, 42, 0.85);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--text-dark);
+  background-color: #fafafa;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+.logo {
+  font-family: "Cinzel", "Inter", sans-serif;
+  font-weight: 700;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 0;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  transition: var(--transition);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.logo {
+  color: var(--primary-gold);
+  font-size: 1.5rem;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: var(--transition);
+  text-transform: uppercase;
+}
+
+.nav-links a:hover {
+  color: var(--primary-gold);
+}
+
+/* Language Toggle Button */
+.lang-btn {
+  background: transparent;
+  border: 1.5px solid var(--primary-gold);
+  color: var(--primary-gold);
+  font-family: "Cinzel", "Inter", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.lang-btn:hover {
+  background: var(--primary-gold);
+  color: var(--darker-green);
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background:
+    linear-gradient(rgba(21, 41, 30, 0.7), rgba(21, 41, 30, 0.4)),
+    url("assets/bg.jpg");
+  /* Fallback or add bg later */
+  background-color: var(--darker-green);
+  /* Fallback color */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-light);
+  position: relative;
+  padding-top: 60px;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.logo-container {
+  margin-bottom: 1.5rem;
+}
+
+.hero-logo {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+  /* Optional: if logo is square/circular */
+  border: 3px solid var(--primary-gold);
+  padding: 5px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  letter-spacing: 5px;
+  margin-bottom: 1rem;
+  color: var(--primary-gold);
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/* Buttons */
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: transparent;
+  border: 2px solid var(--primary-gold);
+  color: var(--primary-gold);
+  text-decoration: none;
+  font-family: "Cinzel", "Inter", sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  transition: var(--transition);
+}
+
+.cta-button:hover {
+  background: var(--primary-gold);
+  color: var(--darker-green);
+  transform: translateY(-3px);
+}
+
+/* Sections */
+.section {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.divider {
+  height: 2px;
+  width: 60px;
+  background: var(--dark-green);
+  margin: 1.5rem auto 2.5rem;
+}
+
+.divider.gold {
+  background: var(--primary-gold);
+}
+
+.dark-bg {
+  background-color: var(--dark-green);
+  color: var(--text-light);
+}
+
+/* Features */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2.5rem;
+  border: 1px solid rgba(197, 160, 89, 0.2);
+  transition: var(--transition);
+}
+
+.feature-card:hover {
+  border-color: var(--primary-gold);
+  transform: translateY(-5px);
+}
+
+.feature-card h3 {
+  color: var(--primary-gold);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/* Pricing Cards */
+.price-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 2rem;
+  gap: 0;
+}
+
+.price-tier {
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--primary-gold);
+  margin-bottom: 1.2rem;
+  display: block;
+}
+
+.price-badge {
+  font-family: "Inter", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-light);
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+
+.price-unit {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--primary-gold);
+  letter-spacing: 1px;
+}
+
+.price-sub {
+  font-size: 0.8rem;
+  color: rgba(245, 245, 245, 0.5);
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+
+.price-features {
+  list-style: none;
+  width: 100%;
+  margin-bottom: 2rem;
+  flex: 1;
+  text-align: left;
+}
+
+.price-features li {
+  padding: 0.6rem 0;
+  font-size: 0.9rem;
+  color: rgba(245, 245, 245, 0.8);
+  border-bottom: 1px solid rgba(197, 160, 89, 0.12);
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.price-features li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  color: var(--primary-gold);
+  font-size: 0.6rem;
+  top: 0.75rem;
+}
+
+.price-cta {
+  font-size: 0.8rem;
+  padding: 0.75rem 1.8rem;
+  letter-spacing: 2px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Entire House Banner Card */
+.entire-house-card {
+  margin-top: 2rem;
+  width: 100%;
+  border-color: rgba(197, 160, 89, 0.5);
+  background: rgba(197, 160, 89, 0.06);
+  box-shadow: 0 0 30px rgba(197, 160, 89, 0.08);
+  padding: 3.5rem 3rem;
+  gap: 1rem;
+}
+
+.entire-house-card:hover {
+  box-shadow: 0 0 50px rgba(197, 160, 89, 0.18);
+}
+
+.entire-house-card .price-badge {
+  font-size: 4rem;
+}
+
+.entire-house-card .price-tier {
+  font-size: 1rem;
+  letter-spacing: 4px;
+}
+
+.entire-house-desc {
+  font-size: 0.95rem;
+  color: rgba(245, 245, 245, 0.75);
+  max-width: 680px;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.entire-house-card .price-cta {
+  width: auto;
+  padding: 0.85rem 3rem;
+}
+
+/* Contact Info */
+.contact-info {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 2.5rem;
+  text-align: left;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 2rem;
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  background: rgba(197, 160, 89, 0.05);
+  transition: var(--transition);
+}
+
+.contact-item:hover {
+  border-color: var(--primary-gold);
+  background: rgba(197, 160, 89, 0.12);
+  transform: translateY(-2px);
+}
+
+.contact-label {
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  color: var(--primary-gold);
+  letter-spacing: 1px;
+  min-width: 90px;
+}
+
+.contact-value {
+  font-size: 1rem;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+/* Map */
+.map-container {
+  width: 100%;
+  margin-top: 0.75rem;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 350px;
+  border: 0;
+  display: block;
+}
+
+.contact-item:has(.map-container) {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Footer */
+footer {
+  background: var(--darker-green);
+  color: var(--text-light);
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(197, 160, 89, 0.3);
+}
+
+/* Typography fixes for Vietnamese / Chinese */
+.lang-foreign h2,
+.lang-foreign h3 {
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.lang-foreign .nav-links a {
+  text-transform: none;
+  letter-spacing: 0.5px;
+}
+
+.lang-foreign .price-tier {
+  text-transform: none;
+  letter-spacing: 1px;
+}
+
+.lang-foreign .price-unit,
+.lang-foreign .price-badge,
+.lang-foreign .contact-label,
+.lang-foreign .cta-button,
+.lang-foreign .lang-btn {
+  letter-spacing: 0.5px;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .nav-links {
+    display: none;
+    /* Mobile menu implementation usually goes here */
+  }
+
+  .contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+}
